@@ -15,6 +15,9 @@ HomePage
     </form>
     <br>
     Recent Messages:
+    <div>
+            {{$messages->links()}}
+    </div>
 
             <ul class="list-group">
                     @foreach($messages as $message)
