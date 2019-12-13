@@ -11,7 +11,7 @@ class MessageController extends Controller
         $message = new Message();
         $message->title = $request->title;
         $message->content = $request->content;
-        
+
         $message->save();
 
         return redirect('/');
@@ -22,6 +22,11 @@ class MessageController extends Controller
         return view('message',[
             'message'=>$message
         ]);
+    }
 
+    public function delete($id){
+        $message = Message::findOrFail($id);
+        $message->delete();
+        return redirect('/');
     }
 }

@@ -11,5 +11,6 @@
         <br>
         {{$message->created_at->diffForHumans()}}
     </p>
+    <a href="/">Home</a>
 
 @endsection
